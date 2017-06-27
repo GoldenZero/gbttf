@@ -7,7 +7,7 @@ object App {
 
   def main(args: Array[String]) {
     for {
-      name <-
+      name <- names ++ args
     } println(s"Hello, $name!")
   }
 }
