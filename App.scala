@@ -6,8 +6,9 @@ object App {
     "Vijay Kiran")
 
   def main(args: Array[String]) {
+    val sortedNames = (names ++ args).sorted
     for {
-      name <- names ++ args
+      name <- sortedNames
     } println(s"Hello, $name!")
   }
 }
