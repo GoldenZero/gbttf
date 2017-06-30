@@ -3,7 +3,8 @@ object App {
     "Ray Kemp",
     "Nicolas Leroux",
     "Vincent Grente",
-    "Vijay Kiran")
+    "Vijay Kiran",
+    "Workshop people")
 
   def main(args: Array[String]) {
     val sortedNames = (names ++ args).sorted
