@@ -1,5 +1,5 @@
 object App {
-  implicit val caseInsensitive = Ordering.comparatorToOrdering(String.CASE_INSENSITIVE_ORDER)
+  implicit val byLastName = Ordering.by((name: String) => name.split("\\s").last)(Ordering.comparatorToOrdering(String.CASE_INSENSITIVE_ORDER))
 
   val names = List(
     "Ray Kemp",
