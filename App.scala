@@ -7,7 +7,7 @@ object App {
 
   def main(args: Array[String]) {
     for {
-      name <- names ++ args
+      name <- (names ++ args).sortBy(_.toLowerCase)
     } println(s"Hello, $name!")
   }
 }
