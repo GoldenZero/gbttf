@@ -1,4 +1,6 @@
 object App {
+  implicit val caseInsensitive = Ordering.comparatorToOrdering(String.CASE_INSENSITIVE_ORDER)
+
   val names = List(
     "Ray Kemp",
     "Nicolas Leroux",
@@ -6,8 +8,9 @@ object App {
     "Vijay Kiran")
 
   def main(args: Array[String]) {
+    val sortedNames = (names ++ args).sorted
     for {
-      name <- (names ++ args).sortBy(_.toLowerCase)
+      name <- sortedNames
     } println(s"Hello, $name!")
   }
 }
